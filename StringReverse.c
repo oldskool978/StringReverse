@@ -3,12 +3,11 @@
 
 char *GetString();
 void ReverseString(char *StringPTR);
-void FreeString(char * StringPTR);
 
 int main(){
     char* String = GetString();
     ReverseString(String); 
-    FreeString(String);
+    free(String);
     return 0;
 }
 
@@ -27,14 +26,8 @@ char *GetString()
     return FullString;
 }
 
-void FreeString(char * StringPTR)
-{
-    free(StringPTR);
-}
-
 void ReverseString(char *StringPTR)
 {
-    
     int LineTracker = 0, CharCounter = 0;
     while (StringPTR[LineTracker] != '\0')
     {

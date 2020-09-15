@@ -5,10 +5,11 @@ char *GetString();
 void ReverseString(char *StringPTR);
 void FreeString(char * StringPTR);
 
-main(){
+int main(){
     char* String = GetString();
     ReverseString(String); 
     FreeString(String);
+    return 0;
 }
 
 char *GetString()
@@ -34,7 +35,7 @@ void FreeString(char * StringPTR)
 void ReverseString(char *StringPTR)
 {
     
-    int OffsetTracker = 0, LineTracker = 0, CharCounter = 0;
+    int LineTracker = 0, CharCounter = 0;
     while (StringPTR[LineTracker] != '\0')
     {
         CharCounter++;
